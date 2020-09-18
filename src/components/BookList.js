@@ -8,7 +8,7 @@ import BookDetails from "./BookDetails";
 function BookList() {
   const { loading, error, data } = useQuery(getBooksQuery);
   const [selected, setSelected] = useState(null);
-
+console.log('selectedBook:', selected)
   const displayBooks = () => {
     if (loading) return <option>Loading Books...</option>;
     if (error) return <p>Error</p>;
